@@ -16,29 +16,29 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 189kb of code in 210 edited files across 104 commits over last 15 days</small>
+                <small>estimation from 148kb of code in 189 edited files across 103 commits over last 11 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="226.9568955517192" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="226.9568955517192" y="0" width="216.96910972971867" height="8" fill="#724b3b"/>
-                    <rect mask="url(#languages-bar)" x="443.9260052814379" y="0" width="11.080101807561872" height="8" fill="#89e051"/>
-                    <rect mask="url(#languages-bar)" x="455.0061070889997" y="0" width="3.393085001125888" height="8" fill="#701516"/>
-                    <rect mask="url(#languages-bar)" x="458.39919209012567" y="0" width="1.6008079098743782" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="301.9820316061389" height="8" fill="#724b3b"/>
+                    <rect mask="url(#languages-bar)" x="301.9820316061389" y="0" width="148.90062300562224" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="450.8826546117611" y="0" width="7.972762498100593" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="458.8554171098617" y="0" width="0.6116091779364837" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="459.4670262877982" y="0" width="0.5329737122017931" height="8" fill="#701516"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#F05138" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#724b3b" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Swift
+                                Mustache
                             </div>
                             <small>
-                                <div>49.34%</div>
+                                <div>65.65%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -49,31 +49,7 @@
                                 Shell
                             </div>
                             <small>
-                                <div>2.41%</div>
-                            </small>
-                        </div>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Makefile
-                            </div>
-                            <small>
-                                <div>0.35%</div>
-                            </small>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#724b3b" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Mustache
-                            </div>
-                            <small>
-                                <div>47.17%</div>
+                                <div>1.73%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -84,7 +60,31 @@
                                 Ruby
                             </div>
                             <small>
-                                <div>0.74%</div>
+                                <div>0.12%</div>
+                            </small>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#F05138" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Swift
+                            </div>
+                            <small>
+                                <div>32.37%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Makefile
+                            </div>
+                            <small>
+                                <div>0.13%</div>
                             </small>
                         </div>
                     </section>
