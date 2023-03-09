@@ -16,14 +16,13 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 1.51mb of code in 1140 edited files across 587 commits over last 16 days</small>
+                <small>estimation from 1.04mb of code in 1033 edited files across 504 commits over last 15 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.9571910711975" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="459.9571910711975" y="0" width="0.04280892880252782" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="460" height="8" fill="#F05138"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -35,22 +34,11 @@
                                 Swift
                             </div>
                             <small>
-                                <div>99.99%</div>
+                                <div>100%</div>
                             </small>
                         </div>
                     </section>
                     <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Makefile
-                            </div>
-                            <small>
-                                <div>0.01%</div>
-                            </small>
-                        </div>
                     </section>
                 </div>
             </section>
