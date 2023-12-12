@@ -16,15 +16,16 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 977kb of code in 1522 edited files across 626 commits over last 17 days</small>
+                <small>estimation from 929kb of code in 1395 edited files across 604 commits over last 15 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.61868042310067" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="459.61868042310067" y="0" width="0.294768440767843" height="8" fill="#427819"/>
-                    <rect mask="url(#languages-bar)" x="459.9134488638685" y="0" width="0.08655113613149752" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="456.5278398587623" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="456.5278398587623" y="0" width="3.227801898891976" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="459.7556417576543" y="0" width="0.1539508588139899" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="459.90959261646833" y="0" width="0.09040738353170548" height="8" fill="#701516"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -36,7 +37,31 @@
                                 Swift
                             </div>
                             <small>
-                                <div>99.92%</div>
+                                <div>99.25%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Makefile
+                            </div>
+                            <small>
+                                <div>0.03%</div>
+                            </small>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#f1e05a" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                JavaScript
+                            </div>
+                            <small>
+                                <div>0.7%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -48,19 +73,6 @@
                             </div>
                             <small>
                                 <div>0.02%</div>
-                            </small>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Makefile
-                            </div>
-                            <small>
-                                <div>0.06%</div>
                             </small>
                         </div>
                     </section>
