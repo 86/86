@@ -16,14 +16,14 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 2.83mb of code in 2922 edited files across 1274 commits over last 10 days</small>
+                <small>estimation from 2.49mb of code in 2639 edited files across 1200 commits over last 10 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.95651280981366" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="459.95651280981366" y="0" width="0.04348719018636901" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.9520884531915" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="459.9520884531915" y="0" width="0.047911546808485805" height="8" fill="#701516"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
