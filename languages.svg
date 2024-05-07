@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="267" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="287" class="">
     <defs>
         <style/>
     </defs>
@@ -16,15 +16,17 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 1.99mb of code in 2408 edited files across 1222 commits over last 18 days</small>
+                <small>estimation from 2.44mb of code in 2607 edited files across 1239 commits over last 19 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.90773135529247" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="459.90773135529247" y="0" width="0.0722554457146215" height="8" fill="#701516"/>
-                    <rect mask="url(#languages-bar)" x="459.97998680100716" y="0" width="0.020013198992898763" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="397.2893678444471" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="397.2893678444471" y="0" width="61.799848564711816" height="8" fill="#555555"/>
+                    <rect mask="url(#languages-bar)" x="459.08921640915895" y="0" width="0.8298098430953889" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="459.9190262522543" y="0" width="0.06341042781212702" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="459.9824366800665" y="0" width="0.01756331993357475" height="8" fill="#89e051"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -36,7 +38,18 @@
                                 Swift
                             </div>
                             <small>
-                                <div>99.98%</div>
+                                <div>86.37%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#427819" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Makefile
+                            </div>
+                            <small>
+                                <div>0.18%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -55,12 +68,23 @@
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#555555" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                C
+                            </div>
+                            <small>
+                                <div>13.43%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                     <path fill="#701516" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Ruby
                             </div>
                             <small>
-                                <div>0.02%</div>
+                                <div>0.01%</div>
                             </small>
                         </div>
                     </section>
