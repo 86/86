@@ -16,17 +16,17 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 4.52mb of code in 2828 edited files across 839 commits over last 16 days</small>
+                <small>estimation from 5.12mb of code in 3145 edited files across 859 commits over last 16 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="384.13826784850926" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="384.13826784850926" y="0" width="66.82642771958098" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="450.96469556809024" y="0" width="4.685846897663175" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="455.6505424657534" y="0" width="3.998360032232071" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="459.6489024979855" y="0" width="0.3510975020145044" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="395.00562469341907" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="395.00562469341907" y="0" width="54.13916537713999" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="449.14479007055905" y="0" width="6.497795740312489" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="455.64258581087154" y="0" width="4.05368297519179" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="459.6962687860633" y="0" width="0.3037312139366586" height="8" fill="#f1e05a"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -38,7 +38,7 @@
                                 TypeScript
                             </div>
                             <small>
-                                <div>83.51%</div>
+                                <div>85.87%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -46,10 +46,10 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                     <path fill="#3178c6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                Glimmer TS
+                                TSX
                             </div>
                             <small>
-                                <div>1.02%</div>
+                                <div>1.41%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -60,7 +60,7 @@
                                 JavaScript
                             </div>
                             <small>
-                                <div>0.08%</div>
+                                <div>0.07%</div>
                             </small>
                         </div>
                     </section>
@@ -73,7 +73,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>14.53%</div>
+                                <div>11.77%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -81,10 +81,10 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                     <path fill="#3178c6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
-                                TSX
+                                Glimmer TS
                             </div>
                             <small>
-                                <div>0.87%</div>
+                                <div>0.88%</div>
                             </small>
                         </div>
                     </section>
