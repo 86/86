@@ -16,16 +16,16 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 1.34mb of code in 1236 edited files across 559 commits over last 19 days</small>
+                <small>estimation from 1.24mb of code in 1241 edited files across 574 commits over last 18 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="394.07959181274174" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="394.07959181274174" y="0" width="35.306740027510315" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="429.38633184025207" y="0" width="30.524976780822723" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="459.91130862107474" y="0" width="0.08869137892521661" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="387.5866465156342" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="387.5866465156342" y="0" width="51.54050967408295" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="439.1271561897171" y="0" width="20.778304389198983" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="459.9054605789161" y="0" width="0.09453942108389496" height="8" fill="#f1e05a"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -37,7 +37,7 @@
                                 TypeScript
                             </div>
                             <small>
-                                <div>85.67%</div>
+                                <div>84.26%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -48,7 +48,7 @@
                                 TSX
                             </div>
                             <small>
-                                <div>6.64%</div>
+                                <div>4.52%</div>
                             </small>
                         </div>
                     </section>
@@ -61,7 +61,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>7.68%</div>
+                                <div>11.2%</div>
                             </small>
                         </div>
                         <div class="field language details">
