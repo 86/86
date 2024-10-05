@@ -16,15 +16,15 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 385kb of code in 900 edited files across 421 commits over last 8 days</small>
+                <small>estimation from 385kb of code in 899 edited files across 419 commits over last 9 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="453.1229809931636" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="453.1229809931636" y="0" width="5.381725929393272" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="458.50470692255686" y="0" width="1.4952930774431787" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="453.202861064952" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="453.202861064952" y="0" width="5.301582255617369" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="458.50444332056935" y="0" width="1.495556679430677" height="8" fill="#3178c6"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -36,7 +36,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>98.5%</div>
+                                <div>98.52%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -60,7 +60,7 @@
                                 TypeScript
                             </div>
                             <small>
-                                <div>1.17%</div>
+                                <div>1.15%</div>
                             </small>
                         </div>
                     </section>
