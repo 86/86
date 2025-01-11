@@ -16,15 +16,15 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 2.15mb of code in 2245 edited files across 791 commits over last 18 days</small>
+                <small>estimation from 2.06mb of code in 1964 edited files across 718 commits over last 18 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="456.543185843372" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="456.543185843372" y="0" width="3.147090255026014" height="8" fill="#89e051"/>
-                    <rect mask="url(#languages-bar)" x="459.690276098398" y="0" width="0.30972390160200286" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="456.1905362203932" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="456.1905362203932" y="0" width="3.4681431498676893" height="8" fill="#89e051"/>
+                    <rect mask="url(#languages-bar)" x="459.65867937026087" y="0" width="0.3413206297391052" height="8" fill="#701516"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -36,7 +36,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>99.25%</div>
+                                <div>99.17%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -60,7 +60,7 @@
                                 Shell
                             </div>
                             <small>
-                                <div>0.68%</div>
+                                <div>0.75%</div>
                             </small>
                         </div>
                     </section>
