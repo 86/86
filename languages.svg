@@ -16,15 +16,15 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 2.24mb of code in 1625 edited files across 819 commits over last 7 days</small>
+                <small>estimation from 2.03mb of code in 1488 edited files across 758 commits over last 7 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.34662506333837" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="459.34662506333837" y="0" width="0.6322745819665574" height="8" fill="#701516"/>
-                    <rect mask="url(#languages-bar)" x="459.978899645305" y="0" width="0.021100354695042272" height="8" fill="#427819"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="459.272205088231" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="459.272205088231" y="0" width="0.7042912082721628" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="459.9764962965031" y="0" width="0.02350370349685914" height="8" fill="#427819"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -36,7 +36,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>99.86%</div>
+                                <div>99.84%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -47,7 +47,7 @@
                                 Makefile
                             </div>
                             <small>
-                                <div>0%</div>
+                                <div>0.01%</div>
                             </small>
                         </div>
                     </section>
@@ -60,7 +60,7 @@
                                 Ruby
                             </div>
                             <small>
-                                <div>0.14%</div>
+                                <div>0.15%</div>
                             </small>
                         </div>
                     </section>
