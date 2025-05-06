@@ -16,14 +16,14 @@
             </section>
             <section class="column">
                 <h3 class="field">Recently used languages</h3>
-                <small>estimation from 949kb of code in 4006 edited files across 665 commits over last 18 days</small>
+                <small>estimation from 925kb of code in 3782 edited files across 642 commits over last 19 days</small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="448.87076732836704" height="8" fill="#F05138"/>
-                    <rect mask="url(#languages-bar)" x="448.87076732836704" y="0" width="11.129232671632922" height="8" fill="#701516"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="450.29408837429537" height="8" fill="#F05138"/>
+                    <rect mask="url(#languages-bar)" x="450.29408837429537" y="0" width="9.705911625704609" height="8" fill="#701516"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -35,7 +35,7 @@
                                 Swift
                             </div>
                             <small>
-                                <div>97.58%</div>
+                                <div>97.89%</div>
                             </small>
                         </div>
                     </section>
@@ -48,7 +48,7 @@
                                 Ruby
                             </div>
                             <small>
-                                <div>2.42%</div>
+                                <div>2.11%</div>
                             </small>
                         </div>
                     </section>
