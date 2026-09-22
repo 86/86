@@ -6,9 +6,16 @@ on:
       - main
     paths:
       - .github/workflows/metrics.yml
+      - scripts/metrics-base/**
+      - scripts/metrics-languages/**
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      rebuild_history:
+        description: Recalculate all completed years
+        type: boolean
+        default: false
 
 concurrency: 
   group: metrics-${{ github.ref }}
@@ -17,25 +24,82 @@ concurrency:
 jobs:
   metrics-base:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
-      contents: write
+      contents: read
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          token: ${{ secrets.GH_PAT }}
+          ref: ${{ github.ref }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Generate base metrics
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          METRICS_USER: '86'
+          METRICS_REBUILD_HISTORY: ${{ inputs.rebuild_history && '1' || '0' }}
+        run: node scripts/metrics-base/generate.mjs
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: metrics-base
+          path: |
+            github-metrics.svg
+            scripts/metrics-base/history.json
+          if-no-files-found: error
 
   metrics-languages:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref }}
+          persist-credentials: false
+      - uses: pnpm/setup@fbda4c85fc2e1e08721cd8763afea8f48d60f024 # v3.0.0
+        with:
+          working-directory: scripts/metrics-languages
+          runtime: node@24
+          require-lockfile: true
+      - name: Generate language metrics
+        working-directory: scripts/metrics-languages
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          METRICS_USER: '86'
+          METRICS_DAYS: '14'
+          METRICS_OUTPUT: ../../languages.svg
+        run: node generate.mjs
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: metrics-languages
+          path: languages.svg
+          if-no-files-found: error
+
+  publish:
+    needs: [metrics-base, metrics-languages]
+    if: ${{ always() && github.ref == 'refs/heads/main' && (needs.metrics-base.result == 'success' || needs.metrics-languages.result == 'success') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          filename: languages.svg
-          token: ${{ secrets.GH_PAT }}
-          base: ""
-          plugin_languages: yes
-          plugin_languages_sections: recently-used, most-used
-          plugin_languages_recent_load: 1000
-          plugin_languages_recent_days: 365
-          plugin_languages_details: percentage
+          ref: main
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: metrics-*
+          merge-multiple: true
+          path: .
+      - name: Commit metrics
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- github-metrics.svg languages.svg scripts/metrics-base
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore(metrics): refresh profile stats'
+          git push
