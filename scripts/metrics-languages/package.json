@@ -1,0 +1,18 @@
+{
+  "name": "profile-language-metrics",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.26.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
+  },
+  "scripts": {
+    "generate": "node generate.mjs",
+    "test": "node --test test.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "4.3.2",
+    "linguist-js": "2.9.2"
+  }
+}

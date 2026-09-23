@@ -1,0 +1,28 @@
+name: language metrics tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: pnpm/setup@fbda4c85fc2e1e08721cd8763afea8f48d60f024 # v3.0.0
+        with:
+          working-directory: scripts/metrics-languages
+          runtime: node@24
+          require-lockfile: true
+      - name: Test language classifier
+        working-directory: scripts/metrics-languages
+        run: node --test test.mjs
+      - name: Test base metrics cache
+        working-directory: scripts/metrics-base
+        run: node --test test.mjs
