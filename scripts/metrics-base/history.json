@@ -1,0 +1,10 @@
+{
+  "user": "86",
+  "throughYear": 2025,
+  "totals": {
+    "commits": 13665,
+    "pullRequests": 3261,
+    "reviews": 1726,
+    "unavailableContributions": 3164
+  }
+}
