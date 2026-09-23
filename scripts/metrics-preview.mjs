@@ -20,9 +20,11 @@ const profile = {
 }
 const totals = {commits: 15073, pullRequests: 800, reviews: 237}
 const contributions = [0, 2, 3, 1, 0, 5, 7, 2, 4, 0, 1, 6, 3, 2]
+const contributionLevels = ["NONE", "FIRST_QUARTILE", "SECOND_QUARTILE", "THIRD_QUARTILE", "FOURTH_QUARTILE"]
 const days = contributions.map((contributionCount, index) => ({
   date: new Date(now.getTime() - (13 - index) * day).toISOString().slice(0, 10),
   contributionCount,
+  contributionLevel: contributionLevels[contributionCount === 0 ? 0 : Math.min(4, Math.ceil(contributionCount / 2))],
 }))
 await writeFile(baseOutput, renderSvg("86", profile, totals, days, now))
 

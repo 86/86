@@ -3,6 +3,7 @@ import {pathToFileURL} from "node:url"
 
 const apiUrl = "https://api.github.com/graphql"
 const metricKeys = ["commits", "pullRequests", "reviews", "unavailableContributions"]
+const contributionLevels = {NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4}
 const emptyTotals = () => ({commits: 0, pullRequests: 0, reviews: 0, unavailableContributions: 0})
 const xml = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;")
 
@@ -15,7 +16,7 @@ const profileQuery = `query($login: String!, $from: DateTime!, $to: DateTime!) {
     starredRepositories(first: 1) { totalCount }
     calendar: contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
-        weeks { contributionDays { date contributionCount } }
+        weeks { contributionDays { date contributionCount contributionLevel } }
       }
     }
   }
@@ -102,19 +103,19 @@ async function loadHistory(path, user, currentYear, firstYear) {
 
 function calendarDays(profile) {
   const days = profile.calendar?.contributionCalendar?.weeks?.flatMap(week => week.contributionDays) || []
-  return days.filter(day => /^\d{4}-\d{2}-\d{2}$/.test(day.date) && Number.isSafeInteger(day.contributionCount)).slice(-14)
+  return days.filter(day => /^\d{4}-\d{2}-\d{2}$/.test(day.date) && Number.isSafeInteger(day.contributionCount) && Object.hasOwn(contributionLevels, day.contributionLevel)).slice(-14)
 }
 
 export function renderSvg(user, profile, totals, days, now) {
   const name = xml(user)
   const joinedYear = new Date(profile.createdAt).getUTCFullYear()
   const cells = days.map((day, index) => {
-    const level = day.contributionCount === 0 ? 0 : day.contributionCount < 3 ? 1 : day.contributionCount < 7 ? 2 : 3
+    const level = contributionLevels[day.contributionLevel]
     return `<rect class="day level-${level}" x="${260 + index * 15}" y="36" width="11" height="11" rx="2"><title>${xml(day.date)}: ${day.contributionCount} contributions</title></rect>`
   }).join("")
   const updated = now.toISOString().slice(0, 10)
   return `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="211" viewBox="0 0 480 211" role="img" aria-label="GitHub profile metrics for ${name}">
-<style>svg{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}text{fill:#57606a}.title,.heading{fill:#0969da}.title{font-size:25px;font-weight:600}.heading{font-size:15px}.label{font-size:13px}.value{font-size:13px;font-weight:600;fill:#24292f}.meta{font-size:11px}.day{fill:#ebedf0}.level-1{fill:#9be9a8}.level-2{fill:#40c463}.level-3{fill:#216e39}@media(prefers-color-scheme:dark){text{fill:#8b949e}.title,.heading{fill:#58a6ff}.value{fill:#c9d1d9}.day{fill:#161b22}.level-1{fill:#0e4429}.level-2{fill:#26a641}.level-3{fill:#39d353}}</style>
+<style>svg{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}text{fill:#57606a}.title,.heading{fill:#24292f}.title{font-size:25px;font-weight:600}.heading{font-size:15px}.label{font-size:13px}.value{font-size:13px;font-weight:600;fill:#24292f}.meta{font-size:11px}.day{fill:#eff2f5}.level-1{fill:#aceebb}.level-2{fill:#4ac26b}.level-3{fill:#2da44e}.level-4{fill:#116329}@media(prefers-color-scheme:dark){text{fill:#8b949e}.title,.heading{fill:#fff}.value{fill:#c9d1d9}.day{fill:#151b23}.level-1{fill:#033a16}.level-2{fill:#196c2e}.level-3{fill:#2ea043}.level-4{fill:#56d364}}</style>
 <text class="title" x="10" y="31">${name}</text>
 <text class="label" x="10" y="54">Joined GitHub in ${joinedYear}</text>
 <text class="label" x="10" y="73">${profile.followers.totalCount} followers</text>
@@ -144,8 +145,9 @@ export async function generate({
   if (Number.isNaN(now.getTime()))
     throw new Error("Invalid current date")
   const currentYear = now.getUTCFullYear()
-  const calendarFrom = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 13)).toISOString()
-  const profile = await graphql(token, profileQuery, {login: user, from: calendarFrom, to: now.toISOString()}, fetcher)
+  const calendarFrom = new Date(now)
+  calendarFrom.setUTCFullYear(now.getUTCFullYear() - 1)
+  const profile = await graphql(token, profileQuery, {login: user, from: calendarFrom.toISOString(), to: now.toISOString()}, fetcher)
   const firstYear = new Date(profile.createdAt).getUTCFullYear()
   if (!Number.isInteger(firstYear) || firstYear > currentYear)
     throw new Error("Invalid account creation date from GitHub")

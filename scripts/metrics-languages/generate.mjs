@@ -217,7 +217,7 @@ function section(title, subtitle, totals, colors, topY, id) {
 function renderSvg(recent, most, colors) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="302" viewBox="0 0 480 302" role="img" aria-label="GitHub language activity">
 <defs><clipPath id="recent-bar"><rect x="10" y="${recentY + barOffset}" width="460" height="8" rx="4"/></clipPath><clipPath id="most-bar"><rect x="10" y="${mostY + barOffset}" width="460" height="8" rx="4"/></clipPath></defs>
-<style>svg{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292f}text{fill:#24292f}.title{font-size:17px;font-weight:400}.title,.heading{fill:#0969da}.heading{font-size:14px}.meta{font-size:11px;fill:#57606a}.label,.percent{font-size:12px}@media(prefers-color-scheme:dark){text{fill:#c9d1d9}.title,.heading{fill:#58a6ff}.meta{fill:#8b949e}}</style>
+<style>svg{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#24292f}text{fill:#24292f}.title{font-size:17px;font-weight:400}.title,.heading{fill:#24292f}.heading{font-size:14px}.meta{font-size:11px;fill:#57606a}.label,.percent{font-size:12px}@media(prefers-color-scheme:dark){text{fill:#c9d1d9}.title,.heading{fill:#fff}.meta{fill:#8b949e}}</style>
 <text class="title" x="10" y="22">Languages</text>
 ${section("Recently used languages", `${recent.commits} ${recent.partial ? "sampled " : ""}commits · ${days} days`, recent.totals, colors, recentY, "recent-bar")}
 ${section("Most used languages", `${most.repositories} repositories`, most.totals, colors, mostY, "most-bar")}

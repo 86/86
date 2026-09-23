@@ -23,8 +23,8 @@ test("caches completed years and refreshes the current year", async () => {
         repositories: {totalCount: 99},
         starredRepositories: {totalCount: 2214},
         calendar: {contributionCalendar: {weeks: [{contributionDays: [
-          {date: "2026-09-22", contributionCount: 3},
-          {date: "2026-09-23", contributionCount: 0},
+          {date: "2026-09-22", contributionCount: 3, contributionLevel: "SECOND_QUARTILE"},
+          {date: "2026-09-23", contributionCount: 0, contributionLevel: "NONE"},
         ]}]}},
       }}})
     }
@@ -47,6 +47,7 @@ test("caches completed years and refreshes the current year", async () => {
       user: "86", throughYear: 2025, totals: {commits: 30, pullRequests: 3, reviews: 6, unavailableContributions: 0},
     })
     assert.match(await readFile(output, "utf8"), /<text class="value" x="220" y="134" text-anchor="end">60<\/text>/)
+    assert.match(await readFile(output, "utf8"), /<rect class="day level-2"[^>]*><title>2026-09-22: 3 contributions<\/title><\/rect>/)
 
     calls.length = 0
     await generate({...options, now: new Date("2026-09-24T12:00:00Z")})
