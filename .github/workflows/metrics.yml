@@ -9,7 +9,8 @@ on:
       - scripts/metrics-base/**
       - scripts/metrics-languages/**
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '15 5 * * *'
+      timezone: 'Asia/Tokyo'
   workflow_dispatch:
     inputs:
       rebuild_history:
